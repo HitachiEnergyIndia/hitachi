@@ -71,22 +71,31 @@ body {
 .info {
     font-size: 16px;
     color: var(--text-color);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: left;
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: normal;
 }
+
+
 
 .label {
     font-weight: 600;
     color: var(--label-color);
-    display: inline-block;
-    min-width: 120px;
+    display: block;  /* <-- This forces the label onto its own line */
+    margin-bottom: 2px;
 }
+
 
 /* 🌟 Links */
 .info a {
     text-decoration: none;
     color: var(--link-color);
     font-weight: 600;
+     word-break: break-word;
+    white-space: normal;
 }
 
 .info a:hover {
