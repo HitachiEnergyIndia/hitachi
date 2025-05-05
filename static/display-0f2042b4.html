@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akhil Gupta - Business Card</title>
+    <link rel="stylesheet" href="https://aasthaarora21.github.io/QRCode/static/style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="profile-icon">👤</div>
+        <div class="name">Akhil  Gupta</div>
+        
+        <div class='designation'>Associate sales Director at Hitachi Energy India Limited</div>
+        
+        <div class='info'><span class='label'>Reception</span> +918009253535</div>
+        <div class='info'><span class='label'>Mobile</span> +919711533112</div>
+        
+        
+        <div class='info'><span class='label'>Email</span> <a href='mailto:akhil.gupta@hitachienergy.com'>akhil.gupta@hitachienergy.com</a></div>
+        
+        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>17th Floor<br> Tower-1<br> M3M IFC<br> Sector 66<br> Gurgaon - 121001<br> Haryana<br> India</td></tr></table></div>
+
+
+        <div class='info'><span class='label'>Website</span> 
+<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
+        
+        
+        <div class="footer">Powered by Ankul Reprographics And Prints</div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+FN:Akhil Gupta
+ORG:Hitachi Energy India Limited
+TITLE:Associate sales Director
+TEL;TYPE=WORK:+918009253535
+EMAIL:akhil.gupta@hitachienergy.com
+ADR:17th Floor, Tower-1, M3M IFC, Sector 66, Gurgaon - 121001, Haryana, India
+URL:www.hitachienergy.com
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = "contact.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+    </body>
+    </html>
+    
