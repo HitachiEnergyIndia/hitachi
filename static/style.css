@@ -25,16 +25,17 @@ body {
 
 /* 🌟 Business Card */
 .card {
-    background: var(--card-bg);
-    backdrop-filter: var(--blur-effect);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px var(--shadow-color);
-    max-width: 440px;   /* was 400px */
-  width: 95%;         /* was 90% */
-  padding: 30px 24px; /* increase horizontal space slightly */
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out forwards;
+  background: var(--card-bg);
+  backdrop-filter: var(--blur-effect);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(236, 28, 41, 0.25); /* Red tint */
+  padding: 30px 24px;
+  max-width: 440px;
+  width: 95%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
