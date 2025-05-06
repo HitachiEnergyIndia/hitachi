@@ -160,11 +160,15 @@ body {
     white-space: nowrap;
 }
 
-.info-value {
-    flex: 1;
-    word-break: break-word;
-    white-space: normal;
+.info-value a {
+    display: inline;              /* Prevent block behavior */
+    word-break: break-word;      /* Break long emails */
+    white-space: normal;         /* Allow wrapping */
+    color: var(--link-color);
+    font-weight: 600;
+    text-decoration: none;
 }
+
 
 .info a {
     color: var(--link-color);
