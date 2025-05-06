@@ -77,17 +77,19 @@ body {
     color: var(--text-color);
     margin-bottom: 12px;
     text-align: left;
-    display: block;
-    width: 100%;
-    word-wrap: break-word;
-    white-space: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px;
 }
 
+
 .label {
+    display: inline-block;
     font-weight: 600;
     color: var(--label-color);
-    display: block; /* Changed from inline-block */
-    margin-bottom: 2px;
+    min-width: 90px;  /* Adjust spacing to align values neatly */
+    vertical-align: top;
 }
 
 /* 🌟 Links */
@@ -95,9 +97,9 @@ body {
     text-decoration: none;
     color: var(--link-color);
     font-weight: 600;
-    word-break: break-word;
-    white-space: normal;
+    white-space: nowrap;
 }
+
 
 .info a:hover {
     text-decoration: underline;
