@@ -7,7 +7,7 @@
     --text-color: #333;
     --label-color: #555;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --link-color: #007bff;
+    --link-color: #EC1C29;
     --blur-effect: blur(15px);
 }
 
@@ -28,10 +28,9 @@ body {
   background: var(--card-bg);
   backdrop-filter: var(--blur-effect);
   border-radius: 15px;
-  box-shadow: 0 0 25px rgba(236, 28, 41, 0.5);
-  padding: 30px 24px;
-  max-width: 440px;
-  width: 95%;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
   text-align: center;
   animation: fadeIn 0.5s ease-in-out forwards;
 }
