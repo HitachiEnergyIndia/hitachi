@@ -28,9 +28,9 @@ body {
   background: var(--card-bg);
   backdrop-filter: var(--blur-effect);
   border-radius: 15px;
-  padding: 25px;
-  max-width: 410px;
-  width: 90%;
+  padding: 30px 24px ;
+  max-width: 440px;
+  width: 95%;
   text-align: center;
   box-shadow: 0 0 35px rgb(0 0 0);
   animation: fadeIn 0.5s ease-in-out forwards;
