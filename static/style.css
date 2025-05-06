@@ -141,32 +141,38 @@ body {
     vertical-align: top;
 }
 .info {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    width: 100%;
-    font-size: 16px;
-    color: var(--text-color);
-    flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
 .info-label {
-    font-weight: 600;
-    color: var(--label-color);
-    min-width: 90px;     /* Reduced from 90px to 70px */
-    margin-right: 5px;   /* Slightly tighter */
-    white-space: nowrap;
+  font-weight: 600;
+  color: var(--label-color);
+  margin-right: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.info-value {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 .info-value a {
-    display: inline;              /* Prevent block behavior */
-    word-break: break-word;      /* Break long emails */
-    white-space: normal;         /* Allow wrapping */
-    color: var(--link-color);
-    font-weight: 600;
-    text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--link-color);
+  font-weight: 600;
+  max-width: 100%;
 }
 
 
