@@ -28,7 +28,7 @@ body {
   background: var(--card-bg);
   backdrop-filter: var(--blur-effect);
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(236, 28, 41, 0.25); /* Red tint */
+  box-shadow: 0 0 25px rgba(236, 28, 41, 0.5);
   padding: 30px 24px;
   max-width: 440px;
   width: 95%;
