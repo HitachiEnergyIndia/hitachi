@@ -155,8 +155,8 @@ body {
 .info-label {
     font-weight: 600;
     color: var(--label-color);
-    min-width: 70px;     /* Reduced from 90px to 70px */
-    margin-right: 4px;   /* Slightly tighter */
+    min-width: 85px;     /* Reduced from 90px to 70px */
+    margin-right: 5px;   /* Slightly tighter */
     white-space: nowrap;
 }
 
