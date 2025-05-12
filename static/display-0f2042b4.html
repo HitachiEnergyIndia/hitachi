@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +9,49 @@
 <body>
     <div class="card">
         <div class="profile-icon">👤</div>
-        <div class="name">Akhil  Gupta</div>
+        <div class="name">Akhil Gupta</div>
         
         <div class='designation'>Associate Sales Director<br>Hitachi Energy India Limited</div>
         
+        <!-- Mobile -->
         <div class="info">
-  <div class="info-label">Mobile</div>
-  <div class="info-value">+919711533112 / +918009253535</div>
-</div>
+            <div class="info-label">Mobile</div>
+            <div class="info-value">
+                <a href="tel:+919711533112">+91 9711533112</a> / 
+                <a href="tel:+918009253535">+91 8009253535</a>
+            </div>
+        </div>
 
-        
-        
-       <div class="info">
-  <div class="info-label">Email</div>
-  <div class="info-value"><a href="mailto:akhil.gupta@hitachienergy.com">akhil.gupta@hitachienergy.com</a></div>
-</div>
+        <!-- Email -->
+        <div class="info">
+            <div class="info-label">Email</div>
+            <div class="info-value">
+                <a href="mailto:akhil.gupta@hitachienergy.com">akhil.gupta@hitachienergy.com</a>
+            </div>
+        </div>
 
-        
-        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>17th Floor, Tower-1, M3M IFC<br> Sector 66, Gurgaon - 121001, Haryana, India</td></tr></table></div>
+        <!-- Address -->
+        <div class='info'>
+            <div class='info-label'>Address</div> 
+            <div class='info-value'>
+                17th Floor, Tower-1, M3M IFC<br>
+                Sector 66, Gurgaon - 121001, Haryana, India
+            </div>
+        </div>
 
+        <!-- Website -->
+        <div class='info'>
+            <div class='info-label'>Website</div> 
+            <div class='info-value'>
+                <a href='https://www.hitachienergy.com' target='_blank'>
+                    www.hitachienergy.com
+                </a>
+            </div>
+        </div>
 
-        <div class='info'><span class='label'>Website</span> 
-<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
-        
-        
+        <!-- Save Contact Button -->
+        <button class="button" onclick="downloadVCard()">Save Contact</button>
+
         <div class="footer">Powered by Ankul Reprographics And Prints</div>
     </div>
 
@@ -41,25 +59,73 @@
         function downloadVCard() {
             const vCardData = `BEGIN:VCARD
 VERSION:3.0
+N:Gupta;Akhil;;;
 FN:Akhil Gupta
 ORG:Hitachi Energy India Limited
-TITLE:Associate sales Director
-TEL;TYPE=WORK:+918009253535
+TITLE:Associate Sales Director
+TEL;TYPE=WORK,VOICE:+919711533112
+TEL;TYPE=WORK,VOICE:+918009253535
 EMAIL:akhil.gupta@hitachienergy.com
-ADR:17th Floor, Tower-1, M3M IFC, Sector 66, Gurgaon - 121001, Haryana, India
-URL:www.hitachienergy.com
+ADR;TYPE=WORK:;;17th Floor, Tower-1, M3M IFC, Sector 66;Gurgaon;Haryana;121001;India
+URL:https://www.hitachienergy.com
 END:VCARD`;
 
             const blob = new Blob([vCardData], { type: 'text/vcard' });
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = "contact.vcf";
+            a.download = "Akhil_Gupta.vcf";
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
         }
     </script>
 
-    </body>
-    </html>
-    
+    <style>
+        /* Button styling */
+        .button {
+            background-color: #EC1C29;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #b0131f;
+        }
+
+        /* Info styling */
+        .info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 6px;
+        }
+
+        .info-label {
+            min-width: 75px;
+            white-space: nowrap;
+            font-weight: 600;
+            color: #EC1C29; /* Hitachi Red */
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            flex: 1;
+            word-break: break-all;
+            white-space: normal;
+        }
+
+        .info-value a {
+            color: #EC1C29;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+
+</body>
+</html>

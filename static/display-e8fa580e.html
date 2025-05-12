@@ -1,31 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Gupta - Business Card</title>
-    <link rel="stylesheet" href="https://aasthaarora21.github.io/QRCode/static/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
+    <div class="card" id="card-abhishek">
         <div class="profile-icon">👤</div>
         <div class="name">Abhishek Kumar Gupta</div>
         
-        <div class='designation'>Account Management / Key Accounts Entry Professional at Hitachi Energy India Limited</div>
+        <div class='designation'>Account Management /<br>Key Accounts Entry Professional<br>Hitachi Energy India Limited</div>
         
+        <!-- Mobile -->
+        <div class='info'>
+            <span class='label'>Mobile</span> 
+            <a href='tel:+919807525839'>+919807525839</a>
+        </div>
         
-        <div class='info'><span class='label'>Mobile</span> +919807525839</div>
-        
-        
-        <div class='info'><span class='label'>Email</span> <a href='mailto:abhishek-kumar.gupta@hitachienergy.com'>abhishek-kumar.gupta@hitachienergy.com</a></div>
-        
-        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Summit Building<br> Wing A<br> 11th Floor<br> Vibhuti Khand<br> Gomti Nagar Lucknow 226010<br> Uttar Pradesh<br> India</td></tr></table></div>
+        <!-- Email -->
+        <div class='info'>
+            <span class='label'>Email</span> 
+            <a href='mailto:abhishek-kumar.gupta@hitachienergy.com'>
+                abhishek-kumar.gupta@hitachienergy.com
+            </a>
+        </div>
 
+        <!-- Address -->
+        <div class='info'>
+            <span class='label'>Address</span> 
+            <div class='info-value'>
+                Summit Building, Wing A<br>
+                11th Floor, Vibhuti Khand<br>
+                Gomti Nagar, Lucknow, 226010<br>
+                Uttar Pradesh, India
+            </div>
+        </div>
 
-        <div class='info'><span class='label'>Website</span> 
-<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
-        
+        <!-- Website -->
+        <div class='info'>
+            <span class='label'>Website</span> 
+            <a href='https://www.hitachienergy.com' target='_blank'>
+                www.hitachienergy.com
+            </a>
+        </div>
         
         <div class="footer">Powered by Ankul Reprographics And Prints</div>
     </div>
@@ -37,10 +56,10 @@ VERSION:3.0
 FN:Abhishek Gupta
 ORG:Hitachi Energy India Limited
 TITLE:Account Management / Key Accounts Entry Professional
-TEL;TYPE=WORK:
+TEL;TYPE=WORK:+919807525839
 EMAIL:abhishek-kumar.gupta@hitachienergy.com
 ADR:Summit Building, Wing A, 11th Floor, Vibhuti Khand, Gomti Nagar Lucknow 226010, Uttar Pradesh, India
-URL:www.hitachienergy.com
+URL:https://www.hitachienergy.com
 END:VCARD`;
 
             const blob = new Blob([vCardData], { type: 'text/vcard' });
@@ -53,6 +72,40 @@ END:VCARD`;
         }
     </script>
 
-    </body>
-    </html>
-    
+    <style>
+        /* Scoped CSS */
+        #card-abhishek .info-value {
+            word-break: break-all;
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+
+        #card-abhishek .info a {
+            color: #EC1C29;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 6px;
+        }
+
+        .info-label {
+            min-width: 75px;
+            white-space: nowrap;
+            font-weight: 600;
+            color: var(--label-color);
+            flex-shrink: 0;
+        }
+
+        .info-value {
+            flex: 1;
+            word-break: break-all;
+            white-space: normal;
+        }
+    </style>
+</body>
+</html>
