@@ -7,7 +7,7 @@
     --text-color: #333;
     --label-color: #555;
     --shadow-color: rgba(0, 0, 0, 0.1);
-    --link-color: #007bff;
+    --link-color: #EC1C29;
     --blur-effect: blur(15px);
 }
 
@@ -19,20 +19,23 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* 🌟 Business Card */
 .card {
-    background: var(--card-bg);
-    backdrop-filter: var(--blur-effect);
-    border-radius: 15px;
-    box-shadow: 0 8px 20px var(--shadow-color);
-    padding: 30px;
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    animation: fadeIn 0.5s ease-in-out forwards;
+  background: var(--card-bg);
+  backdrop-filter: var(--blur-effect);
+  border-radius: 15px;
+  padding: 30px 24px ;
+  max-width: 440px;
+  width: 95%;
+  text-align: center;
+  box-shadow: 0 0 35px rgb(0 0 0);
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -52,6 +55,8 @@ body {
     font-weight: bold;
     color: white;
     margin: 0 auto 15px;
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 🌟 Name & Role */
@@ -71,15 +76,21 @@ body {
 .info {
     font-size: 16px;
     color: var(--text-color);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 3px;
 }
 
+
 .label {
+    display: inline-block;
     font-weight: 600;
     color: var(--label-color);
-    display: inline-block;
-    min-width: 120px;
+    min-width: 90px;  /* Adjust spacing to align values neatly */
+    vertical-align: top;
 }
 
 /* 🌟 Links */
@@ -87,7 +98,9 @@ body {
     text-decoration: none;
     color: var(--link-color);
     font-weight: 600;
+    white-space: nowrap;
 }
+
 
 .info a:hover {
     text-decoration: underline;
@@ -117,6 +130,7 @@ body {
     margin-top: 20px;
 }
 
+/* Optional: Table Info Section */
 .info table {
     width: 100%;
     border-collapse: collapse;
@@ -127,9 +141,43 @@ body {
     padding: 5px;
     vertical-align: top;
 }
+.info {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
 
-.label {
-    font-weight: bold;
-    padding-right: 10px;
+.info-label {
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;     /* Keeps all labels aligned */
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.info-value {
+  flex: 1;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.info-value a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+
+.info a {
+    color: var(--link-color);
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
 }
 
