@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Khurana - Business Card</title>
+    <link rel="stylesheet" href="{ url_for('static', filename='style.css') }">
+
+</head>
+<body>
+    <div class="card">
+        <div class="profile-icon">👤</div>
+        <div class="name">Sanjay  Khurana</div>
+        
+        <div class='designation'>Regional Sales Director Zone North at Hitachi Energy India Limited</div>
+        
+        
+        <div class='info'><span class='label'>Mobile</span> +919878447559</div>
+        
+        
+        <div class='info'><span class='label'>Email</span> <a href='mailto:sanjay.khurana@hitachienergy.com'>sanjay.khurana@hitachienergy.com</a></div>
+        
+        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Vatika Mindscapes<br> Tower D Ground Floor<br> 12/3 Mathura Road<br> Faridabad - 121003</td></tr></table></div>
+
+
+        <div class='info'><span class='label'>Website</span> 
+<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
+        
+        <!-- Save Contact Button -->
+        <button class="button" onclick="downloadVCard()">Save Contact</button>
+
+        <div class="footer">Powered by Ankul Reprographics And Prints</div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+N:Khurana;Sanjay;;;
+FN:Sanjay Khurana
+ORG:Hitachi Energy India Limited
+TITLE:Regional Sales Director Zone North
+
+TEL;TYPE=CELL,VOICE:+919878447559
+
+EMAIL:sanjay.khurana@hitachienergy.com
+
+ADR;TYPE=WORK:;;Vatika Mindscapes; Tower D Ground Floor; 12/3 Mathura Road; Faridabad - 121003
+URL:www.hitachienergy.com
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = "Sanjay_Khurana.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+    </body>
+    </html>
+    

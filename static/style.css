@@ -181,3 +181,22 @@ body {
     word-break: break-word;
 }
 
+
+
+.button {
+    background-color: #EC1C29;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #b0131f;
+}
+
+

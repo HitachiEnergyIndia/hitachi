@@ -61,7 +61,8 @@ def index():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{first_name} {last_name} - Business Card</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
     <div class="card">
@@ -85,7 +86,9 @@ def index():
 <a href='https://{website}' target='_blank'>{website}</a></div>""" if website else ""
 }
         
-        
+        <!-- Save Contact Button -->
+        <button class="button" onclick="downloadVCard()">Save Contact</button>
+
         <div class="footer">Powered by Ankul Reprographics And Prints</div>
     </div>
 
@@ -93,19 +96,23 @@ def index():
         function downloadVCard() {{
             const vCardData = `BEGIN:VCARD
 VERSION:3.0
+N:{last_name};{first_name};;;
 FN:{first_name} {last_name}
 ORG:{company_name}
 TITLE:{designation}
-TEL;TYPE=WORK:{phone_work}
+{"TEL;TYPE=WORK,VOICE:" + phone_work if phone_work else ""}
+{"TEL;TYPE=CELL,VOICE:" + phone_personal if phone_personal else ""}
+{"TEL;TYPE=CELL,VOICE:" + phone_personal_2 if phone_personal_2 else ""}
 EMAIL:{email}
-ADR:{address}
+{"EMAIL:" + email2 if email2 else ""}
+ADR;TYPE=WORK:;;{address.replace(",", ";")}
 URL:{website}
 END:VCARD`;
 
             const blob = new Blob([vCardData], {{ type: 'text/vcard' }});
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = "contact.vcf";
+            a.download = "{first_name}_{last_name}.vcf";
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
