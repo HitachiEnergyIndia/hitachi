@@ -27,7 +27,15 @@
 
         
         
-        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Vatika Mindscapes<br> Tower D Ground Floor<br> 12/3 Mathura Road<br> Faridabad - 121003</td></tr></table></div>
+        <div class="info">
+  <div class="info-label">Address</div>
+  <div class="info-value">
+    Vatika Mindscapes<br>
+    Tower D Ground Floor<br>
+    12/3 Mathura Road<br>
+    Faridabad - 121003
+  </div>
+</div>
 
 
 
@@ -35,32 +43,38 @@
 <a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
         
         
-        <div class="footer">Powered by Ankul Reprographics And Prints</div>
-    </div>
+        <!-- Save Contact Button -->
+<button class="button" onclick="downloadVCard()">Save Contact</button>
 
-    <script>
-        function downloadVCard() {
-            const vCardData = `BEGIN:VCARD
+<div class="footer">Powered by Ankul Reprographics And Prints</div>
+</div>
+
+<script>
+    function downloadVCard() {
+        const vCardData = `BEGIN:VCARD
 VERSION:3.0
+N:Mathur;Sandeep;;;
 FN:Sandeep Mathur
 ORG:Hitachi Energy India Limited
 TITLE:Associate Sales Director - Grid Automation
-TEL;TYPE=WORK:
+TEL;TYPE=WORK,VOICE:+919810956812
 EMAIL:sandeep.mathur@hitachienergy.com
-ADR:Vatika Mindscapes, Tower D Ground Floor, 12/3 Mathura Road, Faridabad - 121003
-URL:www.hitachienergy.com
+ADR;TYPE=WORK:;;Vatika Mindscapes, Tower D Ground Floor, 12/3 Mathura Road;Faridabad;;121003;India
+URL:https://www.hitachienergy.com
 END:VCARD`;
 
-            const blob = new Blob([vCardData], { type: 'text/vcard' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = "contact.vcf";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
-<style>.info {
+        const blob = new Blob([vCardData], { type: 'text/vcard' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = "Sandeep_Mathur.vcf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+
+<style>
+    .info {
   display: flex;
   align-items: flex-start;
   gap: 4px;
