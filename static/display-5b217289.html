@@ -20,6 +20,7 @@
         
         <div class='info'><span class='label'>Email</span> <a href='mailto:sandeep.mathur@hitachienergy.com'>sandeep.mathur@hitachienergy.com</a></div>
         
+        
         <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Vatika Mindscapes<br> Tower D Ground Floor<br> 12/3 Mathura Road<br> Faridabad - 121003</td></tr></table></div>
 
 
@@ -53,7 +54,35 @@ END:VCARD`;
             document.body.removeChild(a);
         }
     </script>
+<style>.info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 6px;
+    flex-wrap: wrap; /* Allows label + value to break properly */
+}
 
+.info-label {
+    min-width: 75px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #EC1C29;
+    flex-shrink: 0;
+}
+
+.info-value {
+    flex: 1;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.info-value a {
+    color: #EC1C29;
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-word;
+}
+</style>
     </body>
     </html>
     
