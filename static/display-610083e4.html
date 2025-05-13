@@ -18,40 +18,90 @@
         <div class='info'><span class='label'>Mobile</span> +919958990627</div>
         
         
-        <div class='info'><span class='label'>Email</span> <a href='mailto:samarpal.singh@hitachienergy.com'>samarpal.singh@hitachienergy.com</a></div>
+      <div class="info">
+  <div class="info-label">Email</div>
+  <div class="info-value">
+    <a href="mailto:samarpal.singh@hitachienergy.com">samarpal.singh@hitachienergy.com</a>
+  </div>
+</div>
+
         
-        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Vatika Mindscapes<br> Tower D Ground Floor<br> 12/3 Mathura Road<br> Faridabad - 121003</td></tr></table></div>
+        <div class="info">
+  <div class="info-label">Address</div>
+  <div class="info-value">
+    Vatika Mindscapes<br>
+    Tower D Ground Floor<br>
+    12/3 Mathura Road<br>
+    Faridabad - 121003
+  </div>
+</div>
 
 
         <div class='info'><span class='label'>Website</span> 
 <a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
         
         
-        <div class="footer">Powered by Ankul Reprographics And Prints</div>
-    </div>
+       <!-- Save Contact Button -->
+<button class="button" onclick="downloadVCard()">Save Contact</button>
 
-    <script>
-        function downloadVCard() {
-            const vCardData = `BEGIN:VCARD
+<div class="footer">Powered by Ankul Reprographics And Prints</div>
+</div>
+
+<script>
+    function downloadVCard() {
+        const vCardData = `BEGIN:VCARD
 VERSION:3.0
-FN:Samar Singh
+N:Singh;Samar Pal;;;
+FN:Samar Pal Singh
 ORG:Hitachi Energy India Limited
-TITLE:Associate Sales Director - Renewable Segment Head Power Grid Grid Automation(PGGA) : India Region
-TEL;TYPE=WORK:
+TITLE:Associate Sales Director - Renewable Segment Head, Power Grid Grid Automation (PGGA), India Region
+TEL;TYPE=WORK,VOICE:+919958990627
 EMAIL:samarpal.singh@hitachienergy.com
-ADR:Vatika Mindscapes, Tower D Ground Floor, 12/3 Mathura Road, Faridabad - 121003
-URL:www.hitachienergy.com
+ADR;TYPE=WORK:;;Vatika Mindscapes, Tower D Ground Floor, 12/3 Mathura Road;Faridabad;;121003;India
+URL:https://www.hitachienergy.com
 END:VCARD`;
 
-            const blob = new Blob([vCardData], { type: 'text/vcard' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = "contact.vcf";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
+        const blob = new Blob([vCardData], { type: 'text/vcard' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = "Samar_Pal_Singh.vcf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
+<style>
+    .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.info-value {
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.info-value a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
 
     </body>
     </html>
