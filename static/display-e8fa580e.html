@@ -46,66 +46,67 @@
             </a>
         </div>
         
-        <div class="footer">Powered by Ankul Reprographics And Prints</div>
-    </div>
+       <!-- Save Contact Button -->
+<button class="button" onclick="downloadVCard()">Save Contact</button>
 
-    <script>
-        function downloadVCard() {
-            const vCardData = `BEGIN:VCARD
+<div class="footer">Powered by Ankul Reprographics And Prints</div>
+</div>
+
+<script>
+    function downloadVCard() {
+        const vCardData = `BEGIN:VCARD
 VERSION:3.0
-FN:Abhishek Gupta
+N:Gupta;Abhishek Kumar;;;
+FN:Abhishek Kumar Gupta
 ORG:Hitachi Energy India Limited
 TITLE:Account Management / Key Accounts Entry Professional
-TEL;TYPE=WORK:+919807525839
+TEL;TYPE=WORK,VOICE:+919807525839
 EMAIL:abhishek-kumar.gupta@hitachienergy.com
-ADR:Summit Building, Wing A, 11th Floor, Vibhuti Khand, Gomti Nagar Lucknow 226010, Uttar Pradesh, India
+ADR;TYPE=WORK:;;Summit Building, Wing A, 11th Floor, Vibhuti Khand, Gomti Nagar;Lucknow;Uttar Pradesh;226010;India
 URL:https://www.hitachienergy.com
 END:VCARD`;
 
-            const blob = new Blob([vCardData], { type: 'text/vcard' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = "contact.vcf";
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
+        const blob = new Blob([vCardData], { type: 'text/vcard' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = "Abhishek_Kumar_Gupta.vcf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
 
     <style>
-        /* Scoped CSS */
-        #card-abhishek .info-value {
-            word-break: break-all;
-            white-space: normal;
-            overflow-wrap: anywhere;
-        }
+    .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
 
-        #card-abhishek .info a {
-            color: #EC1C29;
-            font-weight: 600;
-            text-decoration: none;
-        }
+.info-label {
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
 
-        .info {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            gap: 6px;
-        }
+.info-value {
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
+}
 
-        .info-label {
-            min-width: 75px;
-            white-space: nowrap;
-            font-weight: 600;
-            color: var(--label-color);
-            flex-shrink: 0;
-        }
-
-        .info-value {
-            flex: 1;
-            word-break: break-all;
-            white-space: normal;
-        }
-    </style>
+.info-value a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
 </body>
 </html>
