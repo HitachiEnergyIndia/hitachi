@@ -18,7 +18,13 @@
         <div class='info'><span class='label'>Mobile</span> +919810956812</div>
         
         
-        <div class='info'><span class='label'>Email</span> <a href='mailto:sandeep.mathur@hitachienergy.com'>sandeep.mathur@hitachienergy.com</a></div>
+        <div class="info">
+  <div class="info-label">Email</div>
+  <div class="info-value">
+    <a href="mailto:sandeep.mathur@hitachienergy.com">sandeep.mathur@hitachienergy.com</a>
+  </div>
+</div>
+
         
         
         <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Vatika Mindscapes<br> Tower D Ground Floor<br> 12/3 Mathura Road<br> Faridabad - 121003</td></tr></table></div>
@@ -55,32 +61,34 @@ END:VCARD`;
         }
     </script>
 <style>.info {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    gap: 6px;
-    flex-wrap: wrap; /* Allows label + value to break properly */
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
 }
 
 .info-label {
-    min-width: 75px;
-    white-space: nowrap;
-    font-weight: 600;
-    color: #EC1C29;
-    flex-shrink: 0;
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .info-value {
-    flex: 1;
-    white-space: normal;
-    word-break: break-word;
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .info-value a {
-    color: #EC1C29;
-    font-weight: 600;
-    text-decoration: none;
-    word-break: break-word;
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
 }
 </style>
     </body>
