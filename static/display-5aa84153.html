@@ -16,7 +16,7 @@
        <div class='designation'>
   Vice President<br>
   HBU Asia PE Service Manager<br>
-  BU Grid Integration Singapore<br>
+  BU Grid Integration Singapore<br>at
   <span class="brand-highlight">Hitachi Energy</span>
 </div>
 
@@ -79,6 +79,36 @@ END:VCARD`;
     }
 </script>
     <style>
+        .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
+
+.info-label {
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.info-value {
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.info-value a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
   .brand-highlight {
     color: #EC1C29;
     font-weight: 600;
