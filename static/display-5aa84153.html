@@ -13,7 +13,13 @@
         <div class="profile-icon">👤</div>
         <div class="name">Sandeep  Chopra</div>
         
-        <div class='designation'>Vice President<br>HBU Asia PE Service Manager<br>BU Grid Integration Singapore<br><span style="color: #EC1C29; font-weight: 600;">Hitachi Energy</span></div>
+       <div class='designation'>
+  Vice President<br>
+  HBU Asia PE Service Manager<br>
+  BU Grid Integration Singapore<br>
+  <span class="brand-highlight">Hitachi Energy</span>
+</div>
+
         
         
         <div class='info'><span class='label'>Mobile</span> +919871954433</div>
@@ -72,6 +78,26 @@ END:VCARD`;
         document.body.removeChild(a);
     }
 </script>
+    <style>
+  .brand-highlight {
+    color: #EC1C29;
+    font-weight: 600;
+    animation: subtlePop 0.4s ease-out;
+    display: inline-block;
+  }
+
+  @keyframes subtlePop {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+</style>
+
 
 
     </body>
