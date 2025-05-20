@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onkar Mishra - Business Card</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="card">
+        <div class="profile-icon">👤</div>
+        <div class="name">Onkar  Mishra</div>
+        
+        <div class='designation'>Territory Manager Lucknow at Hitachi Energy India Limited</div>
+        
+        
+        <div class='info'><span class='label'>Mobile</span> +919643017213</div>
+        
+        
+        <div class='info'><span class='label'>Email</span> <a href='mailto:Onkar.Mishra@hitachienergy.com'>Onkar.Mishra@hitachienergy.com</a></div>
+        
+        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Summit Building<br> Wing A<br> 11th Floor<br> Vibhuti Khand<br> Gomti Nagar Lucknow 226010<br> Uttar Pradesh<br> India</td></tr></table></div>
+
+
+        <div class='info'><span class='label'>Website</span> 
+<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
+        
+        <!-- Save Contact Button -->
+        <button class="button" onclick="downloadVCard()">Save Contact</button>
+
+        <div class="footer">Powered by Ankul Reprographics And Prints</div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+N:Mishra;Onkar;;;
+FN:Onkar Mishra
+ORG:Hitachi Energy India Limited
+TITLE:Territory Manager Lucknow
+
+TEL;TYPE=CELL,VOICE:+919643017213
+
+EMAIL:Onkar.Mishra@hitachienergy.com
+
+ADR;TYPE=WORK:;;Summit Building; Wing A; 11th Floor; Vibhuti Khand; Gomti Nagar Lucknow 226010; Uttar Pradesh; India
+URL:www.hitachienergy.com
+END:VCARD`;
+
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = "Onkar_Mishra.vcf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+    </body>
+    </html>
+    
