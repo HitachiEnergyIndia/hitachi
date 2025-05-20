@@ -89,7 +89,7 @@ body {
     display: inline-block;
     font-weight: 600;
     color: var(--label-color);
-    min-width: 76px;  /* Adjust spacing to align values neatly */
+    min-width: 75px;  /* Adjust spacing to align values neatly */
     vertical-align: top;
 }
 
