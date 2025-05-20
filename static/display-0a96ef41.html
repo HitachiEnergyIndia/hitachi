@@ -13,7 +13,7 @@
         <div class="profile-icon">👤</div>
         <div class="name">Onkar  Mishra</div>
         
-        <div class='designation'>Territory Manager Lucknow at Hitachi Energy India Limited</div>
+        <div class='designation'>Territory Manager Lucknow<br>Hitachi Energy India Limited</div>
         
         
         <div class='info'><span class='label'>Mobile</span> +919643017213</div>
@@ -21,17 +21,30 @@
         
         <div class='info'><span class='label'>Email</span> <a href='mailto:Onkar.Mishra@hitachienergy.com'>Onkar.Mishra@hitachienergy.com</a></div>
         
-        <div class='info'><table class='info'><tr><td class='label'><strong>Address</strong></td><td>Summit Building<br> Wing A<br> 11th Floor<br> Vibhuti Khand<br> Gomti Nagar Lucknow 226010<br> Uttar Pradesh<br> India</td></tr></table></div>
+        <!-- Address -->
+        <div class='info'>
+            <span class='label'>Address</span> 
+            <div class='info-value'>
+                Summit Building, Wing A<br>
+                11th Floor, Vibhuti Khand<br>
+                Gomti Nagar, Lucknow, 226010<br>
+                Uttar Pradesh, India
+            </div>
+        </div>
 
-
-        <div class='info'><span class='label'>Website</span> 
-<a href='https://www.hitachienergy.com' target='_blank'>www.hitachienergy.com</a></div>
+        <!-- Website -->
+        <div class='info'>
+            <span class='label'>Website</span> 
+            <a href='https://www.hitachienergy.com' target='_blank'>
+                www.hitachienergy.com
+            </a>
+        </div>
         
-        <!-- Save Contact Button -->
-        <button class="button" onclick="downloadVCard()">Save Contact</button>
+       <!-- Save Contact Button -->
+<button class="button" onclick="downloadVCard()">Save Contact</button>
 
-        <div class="footer">Powered by Ankul Reprographics And Prints</div>
-    </div>
+<div class="footer">Powered by Ankul Reprographics And Prints</div>
+</div>
 
     <script>
         function downloadVCard() {
@@ -59,7 +72,38 @@ END:VCARD`;
             document.body.removeChild(a);
         }
     </script>
+<style>
+    .info {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+}
 
+.info-label {
+  font-weight: 600;
+  color: var(--label-color);
+  min-width: 75px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.info-value {
+  flex: 1;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.info-value a {
+  color: var(--link-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+</style>
     </body>
     </html>
     
